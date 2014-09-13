@@ -11,6 +11,6 @@ Notable changes in my version include:
  * Externalized jSON data
  * Tweaked reveal trigger
  * Dot navigation
- * Arrow navigation effect featured on [another Codrops article](http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/).
+ * Added arrow navigation effect featured on [this Codrops article](http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/).
 
 
