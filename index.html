@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Article Intro</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="svg-wrap">
+			<svg width="64" height="64" viewBox="0 0 64 64">
+				<path id="arrow-left" d="M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z" />
+			</svg>
+			<svg width="64" height="64" viewBox="0 0 64 64">
+				<path id="arrow-right" d="M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z" />
+			</svg>
+		</div>	
+		<div id="container" class="container intro-effect-side">
+			<header class="header">
+				<div class="dotstyle dotstyle-fillup">
+					<ul id="nav">
+					</ul>
+				</div>
+				
+				<div class="bg-img">
+				</div>
+				
+				<div class="title">
+					<h1></h1>
+					<p class="subline"></p>
+					<p id="author"></p>
+				</div>
+
+			</header>
+
+			<nav class="nav-slit">
+				<a class="prev" href="#">
+					<span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-left"></svg></span>
+					<div id="previewLeft">
+						<h3></h3>
+						<img src="img/preview/5.jpg" id="prevThumb" alt="Previous thumb"/>
+					</div>
+				</a>
+				<a class="next" href="#">
+					<span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-right"></svg></span>
+					<div id="previewRight">
+						<h3></h3>
+						<img src="img/preview/6.jpg" id="nextThumb"  alt="Next thumb"/>
+					</div>
+				</a>
+			</nav>
+
+			<button class="trigger" data-info="Read more"><span>Read more</span></button>
+			<article class="content">
+				<div>
+				</div>
+			</article>
+			<section class="related">
+				<div class="inner">
+					<div class="fader">
+						<div class="text">
+							<p>What to Read Next</p>
+							<h4 id="nextTitle"></h4>
+						</div>	
+					</div>	
+				</div>	
+				<div class="next-bg-image">
+					<img src="img/1.jpg" id="readBg" />
+				</div>
+			</section>
+		</div><!-- /container -->
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js'></script>
+		<script src="js/lib/jquery.cycle.all.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/jquery.maximage.min.js" type="text/javascript" charset="utf-8"></script>		
+
+		<script src="js/article.js"></script>
+	</body>
+</html>
