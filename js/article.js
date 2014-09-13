@@ -28,7 +28,8 @@
 		isAnimating,
 		container = document.getElementById( 'container' ),
 		trigger = container.querySelector( 'button.trigger' ),
-		contentData;				
+		contentData,
+		loadMe;				
 		
 	// disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179					
 	// left: 37, up: 38, right: 39, down: 40,
@@ -121,6 +122,7 @@
 	
 	function scrollTop(){
 		$("html, body").animate({ scrollTop: 0 }, "fast");
+		toggle(true);
 	}
 	
 	//allow the user to return to the full bleed image with the mousewheel
@@ -201,7 +203,7 @@
 	}
 	
 	function initImages(){
-		console.log("initImages called");
+		//console.log("initImages called");
 	
 		var total = contentData.sections.length;
 		//console.log("total: " + total);
@@ -209,7 +211,7 @@
 		var html = "";
 
 		for ( var i=0; i<total; i++ ){
-			console.log("image: " + contentData.sections[i].image);
+			//console.log("image: " + contentData.sections[i].image);
 			html += ("<img src=\"" + contentData.sections[i].image + "\" alt=\"Background image\"/>");					
 		}
 		
@@ -229,10 +231,22 @@
 		$("#prevThumb").fadeOut();
 		$("#nextThumb").fadeOut();
 	}
-				
+	
+	function animIntro(){
+
+		$("#container").css({"display": "block"});
+		$(".svg-wrap").css({"display": "block"});
+		$("#loader").css({"height": 0});
+	}
+	
 	function init(){
 		console.log("init called");
-					
+		
+		var images = $('#container .bg-img img');
+			
+		loadMe = new Preloader("#loader",{images:images, callback:animIntro, waitForAnimation:true, autoHide:false});
+		loadMe.start();
+		
 		$('.bg-img').maximage({
 						   cycleOptions: {
 								speed: 500,
